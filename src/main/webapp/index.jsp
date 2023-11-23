@@ -12,8 +12,17 @@
 <br>
 <a href="listadoSocios.jsp">Listado de Socios</a>
 <br>
-<a href="formularioSocio.jsp">Fomulario de Socio Nuevo</a>
+<a href="formularioSocio.jsp">Formulario de Socio Nuevo</a>
 <br>
 <a href="pideNumeroSocio.jsp">Listado de Socios</a>
+<br>
+<a href="detalleSocio.jsp">Busca Socios</a>
+<br>
+<form action="detalleSocio.jsp">
+    <input type="text" name="socioID">
+    <input type="submit" value="enviar">
+
+</form>
+
 </body>
 </html>

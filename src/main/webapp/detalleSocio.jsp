@@ -14,6 +14,7 @@
 <html>
 <head>
     <title>Detalle de socio</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
 </head>
 
 <body>

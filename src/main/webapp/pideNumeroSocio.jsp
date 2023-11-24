@@ -5,39 +5,60 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-  <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <link rel="stylesheet" type="text/css" href="estilos.css" />
-  </head>
-  <body>
-    <%
-      Class.forName("com.mysql.cj.jdbc.Driver");
-      Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/baloncesto","root", "user");
-      Statement s = conexion.createStatement();
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
+</head>
+<body>
+<%
+    Class.forName("com.mysql.cj.jdbc.Driver");
+    Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/baloncesto","root", "root");
+    Statement s = conexion.createStatement();
 
-      ResultSet listado = s.executeQuery ("SELECT * FROM socio");
-    %>
-    <table>
-      <tr><th>Código</th><th>Nombre</th><th>Estatura</th><th>Edad</th><th>Localidad</th></tr>
+    ResultSet listado = s.executeQuery ("SELECT * FROM socio");
+%>
+<table>
+    <tr><th>Código</th><th>Nombre</th><th>Estatura</th><th>Edad</th><th>Localidad</th></tr>
     <%
-      while (listado.next()) {
-          out.println("<tr><td>");
-          out.println(listado.getString("socioID") + "</td>");
-          out.println("<td>" + listado.getString("nombre") + "</td>");
-          out.println("<td>" + listado.getString("estatura") + "</td>");
-          out.println("<td>" + listado.getString("edad") + "</td>");
-          out.println("<td>" + listado.getString("localidad") + "</td>");
+        Integer socioIDADestacar = (Integer)session.getAttribute("socioIDADestacar");
+        String claseADestacar = "";
+
+        while (listado.next()) {
+
+            if (socioIDADestacar != null && socioIDADestacar == listado.getInt("socioID")){
+                claseADestacar = "destacar";
+
+            } else {
+                claseADestacar = "";
+            }
+
     %>
-      <td>
-      <form method="get" action="borraSocio.jsp">
-        <input type="hidden" name="codigo" value="<%=listado.getString("socioID") %>"/>
-        <input type="submit" value="borrar">
-      </form>
-      </td></tr>
+    <tr>
+        <td>
+            <%=listado.getInt("socioID")%>
+        </td>
+        <td>
+            <%=listado.getString("nombre")%>
+        </td>
+        <td>
+            <%=listado.getInt("estatura")%>
+        </td>
+        <td>
+            <%=listado.getInt("edad")%>
+        </td>
+        <td>
+            <%=listado.getString("localidad")%>
+        </td>
+        <td>
+            <form method="get" action="borraSocio.jsp">
+                <input type="hidden" name="codigo" value="<%=listado.getString("socioID") %>"/>
+                <input type="submit" value="borrar">
+            </form>
+        </td></tr>
     <%
-      } // while   
-      conexion.close();
-     %>
-    </table>
-  </body>
+        } // while
+        conexion.close();
+    %>
+</table>
+</body>
 </html>

@@ -8,7 +8,7 @@
   </head>
   <body>
     <h2>Introduzca los datos del nuevo socio:</h2>
-    <form method="get" action="grabaSocio.jsp">
+    <form method="post" action="grabaSocio.jsp">
       Nº socio <input type="text" name="numero"/></br>
       Nombre <input type="text" name="nombre"/></br>
       Estatura <input type="text" name="estatura"/></br>
@@ -16,5 +16,18 @@
       Localidad <input type="text" name="localidad"/></br>
       <input type="submit" value="Aceptar">
     </form>
+
+
+  <%
+    String error = (String)session.getAttribute("error"); // devuelve un objeto, hay que castear a String
+    if (error != null){
+      //si hay error, se muestra el error guardado en la validación
+  %>
+      <span style= "background-color: red; color:white"> Error: <%=error%></span>
+    <%
+      session.removeAttribute("error"); //se borra para resetear
+    }
+
+    %>
   </body>
 </html>

@@ -42,7 +42,7 @@
         ResultSet rs = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/baloncesto", "user", "user");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/baloncesto", "root", "root");
 
 
             String sql = "SELECT * FROM socio WHERE socioID = ? ";
@@ -99,7 +99,7 @@
 
             } else {
                 %>
-                <span>Socio con ID <%=socioID%> </span>
+                <span>Socio con ID <%=socioID%> no existe</span>
                 <%
             }
 

@@ -114,3 +114,14 @@ INSERT INTO `socio` (`socioID`, `nombre`, `estatura`, `edad`, `localidad`) VALUE
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+/*CREAR TABLA ENTRENAMIENTO*/
+CREATE TABLE IF NOT EXISTS `entrenamiento` (
+                                               `id` INT(11) NOT NULL,
+                                               `tipo` ENUM ('fisico', 'tecnico') NOT NULL,
+                                               `ubicacion` VARCHAR(255) NOT NULL,
+                                               `fecha` DATE NOT NULL
+);
+

@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<h1><%= "Hello World!" %>
+<h1><%= "SOCIOS DEL CLUB DE BALONCESTO" %>
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
@@ -23,8 +23,11 @@
 <form action="detalleSocio.jsp">
     <input type="text" name="socioID">
     <input type="submit" value="enviar">
-
 </form>
 
+<%--ENTRENAMIENTOS--%>
+<h3>ENTRENAMIENTOS</h3>
+<a href="entrenamiento.jsp">Ir a entrenamientos</a>
+<br>
 </body>
 </html>

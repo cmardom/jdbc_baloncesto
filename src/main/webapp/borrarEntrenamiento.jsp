@@ -37,14 +37,14 @@
 
             String sqlDelete = "DELETE FROM entrenamiento WHERE id = ?";
             System.out.println(sqlDelete);
-//
-//
-//            ps = conn.prepareStatement(sqlDelete);
-//            ps.setInt(1, id);
-//
-//
-//            int filasAfectadas = ps.executeUpdate();
-//            System.out.println("Entrenamiento borrado > " + filasAfectadas);
+
+
+            ps = conn.prepareStatement(sqlDelete);
+            ps.setInt(1, id);
+
+
+            int filasAfectadas = ps.executeUpdate();
+            System.out.println("Entrenamiento borrado > " + filasAfectadas);
 
         } catch (Exception ex){
             ex.printStackTrace();
@@ -55,7 +55,7 @@
     }
 %>
 
-<%--    <!-- REDIRECCIÓN POR JavaScript EN EL CLIENTE  -->--%>
-<%--    <script>document.location = "listadoEntrenamiento.jsp"</script>--%>
+    <!-- REDIRECCIÓN POR JavaScript EN EL CLIENTE  -->
+    <script>document.location = "listadoEntrenamiento.jsp"</script>
 </body>
 </html>

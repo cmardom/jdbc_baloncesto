@@ -114,5 +114,9 @@
   }
 
 %>
+
+  <form method="post" action="listadoEntrenamiento.jsp">
+    <input type="submit" value="Listado">
+  </form>
 </body>
 </html>

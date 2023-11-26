@@ -12,5 +12,10 @@
 </head>
 <body>
     <h3>Buscar entrenamiento</h3>
+    <form method="post" action="detalleEntrenamiento.jsp">
+        <label for="id">Introduce ID del entrenamiento que quieres buscar</label>
+        <input id="id" name="id" type="number">
+        <input type="submit" value="Buscar">
+    </form>
 </body>
 </html>

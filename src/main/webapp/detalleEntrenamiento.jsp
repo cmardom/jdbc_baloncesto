@@ -18,10 +18,10 @@
   //CÓDIGO DE VALIDACIÓN
   boolean valida = true;
   int entrenamientoID = -1;
-  System.out.println(request.getParameter("entrenamientoID"));
+  System.out.println(request.getParameter("id"));
 
   try {
-    entrenamientoID = Integer.parseInt(request.getParameter("entrenamientoID"));
+    entrenamientoID = Integer.parseInt(request.getParameter("id"));
 
   } catch (Exception ex) {
     ex.printStackTrace();

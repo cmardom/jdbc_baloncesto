@@ -36,8 +36,6 @@
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/baloncesto", "root", "root");
 
             String sqlDelete = "DELETE FROM entrenamiento WHERE id = ?";
-            System.out.println(sqlDelete);
-
 
             ps = conn.prepareStatement(sqlDelete);
             ps.setInt(1, id);

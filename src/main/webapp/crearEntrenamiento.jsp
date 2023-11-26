@@ -8,21 +8,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Entrenamientos</title>
+    <title>Crear entrenamiento</title>
 </head>
 <body>
     <h3>Crear entrenamiento</h3>
-    <form method="post" action="">
+    <form method="post" action="grabaEntrenamiento.jsp">
         <label for="id"> ID </label>
         <input id = "id" type="number" required>
         <br>
 
-        <label> Tipo
-            <select name="tipo">
+        <label for="tipo"> Tipo </label>
+        <select id="tipo" name="tipo">
                 <option value="fisico">Físico</option>
                 <option value="tecnico">Técnico</option>
             </select>
-        </label>
         <br>
 
         <label for="ubicacion"> Ubicacion </label>

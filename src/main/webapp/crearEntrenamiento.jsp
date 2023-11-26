@@ -14,7 +14,7 @@
     <h3>Crear entrenamiento</h3>
     <form method="post" action="grabaEntrenamiento.jsp">
         <label for="id"> ID </label>
-        <input id = "id" type="number" required>
+        <input id="id" name="id" type="number" required>
         <br>
 
         <label for="tipo"> Tipo </label>
@@ -25,11 +25,11 @@
         <br>
 
         <label for="ubicacion"> Ubicacion </label>
-        <input id = "ubicacion" type="text" required>
+        <input id="ubicacion" name="ubicacion" type="text" required>
         <br>
 
         <label for="fecha"> Fecha </label>
-        <input id = "fecha" type="date" required>
+        <input id="fecha" name="fecha" type="text" required>
         <br>
 
         <input type="submit" value="Crear entrenamiento">

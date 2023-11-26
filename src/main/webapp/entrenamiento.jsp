@@ -22,7 +22,7 @@
   <a href="listadoEntrenamiento.jsp">Listado de entrenamientos</a>
   <br>
 
-  <a href="borrarEntrenamiento.jsp">Borrar entrenamiento</a>
+  <a href="pideIdEntrenamiento.jsp">Borrar entrenamiento</a>
   <br>
 
 

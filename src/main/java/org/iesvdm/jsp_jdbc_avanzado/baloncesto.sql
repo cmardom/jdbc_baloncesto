@@ -118,10 +118,10 @@ INSERT INTO `socio` (`socioID`, `nombre`, `estatura`, `edad`, `localidad`) VALUE
 
 
 /*CREAR TABLA ENTRENAMIENTO*/
-CREATE TABLE IF NOT EXISTS `entrenamiento` (
+CREATE TABLE `entrenamiento` (
                                                `id` INT(11) NOT NULL,
-                                               `tipo` ENUM ('fisico', 'tecnico') NOT NULL,
+                                               `tipo` VARCHAR(255) NOT NULL,
                                                `ubicacion` VARCHAR(255) NOT NULL,
-                                               `fecha` DATE NOT NULL
+                                               `fecha` VARCHAR(255) NOT NULL
 );
 
